@@ -12,6 +12,7 @@ find_package(OpenGL REQUIRED)
 # Пути к исходникам
 set(SOURCES
     src/main.cpp
+    src/maze.cpp
     src/camera.cpp
     src/shader.cpp
     src/glad.c
@@ -29,3 +30,4 @@ target_link_libraries(SimpleFPS glfw OpenGL::GL)
 # Копируем шейдеры и текстуры в папку сборки
 file(COPY ${CMAKE_SOURCE_DIR}/shaders DESTINATION ${CMAKE_BINARY_DIR})
 file(COPY ${CMAKE_SOURCE_DIR}/textures DESTINATION ${CMAKE_BINARY_DIR})
+
